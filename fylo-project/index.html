@@ -4,19 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
   <title>Fylo data storage component</title>
 </head>
 
 <body>
+  <section class="upper">
+    
+          <!-- empty section to take up space on the page -->
 
-  You’ve used 815 GB of your storage
+  </section>
+  <section class="lower">
 
-  185 GB Left
+    <div class="fyloCard">
+      <div class="fylohead">
+        <img src="assets/logo.svg" alt="Fylo logo">
+      </div>
+      <div class="fyloimages">
+        <img src="assets/icon-document.svg" alt="document icon" class=""icon-1">
+        <img src="assets/icon-folder.svg" alt="folder icon" class="icon-2">
+        <img src="assets/icon-upload.svg" alt="upload to cloud icon" class="icon-3">
+      </div>
+      
+    </div>
+  <div class="storage">
+   <p>You’ve used 815 GB of your storage</p> 
   
-  0 GB
-  1000 GB
+   <p>185 <p class="remainder">GB Left</p> </p> 
+    
+    <p class="min">0 GB</p>
+    <p class="max">1000 GB</p>
+  </div>
+  </section>
+  
+  
   
 </body>
 </html>
