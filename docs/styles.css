@@ -154,7 +154,7 @@ color: black;
 }
 .loadingbar{
     margin: 2% 0;
-    background-color: hsl(335, 100%, 65%);
+    background-color: #050A30;
     width:80%;
     height:13%;
     border-radius: 10px;
@@ -162,14 +162,14 @@ color: black;
 .partialload{
     width:70%;
     height:100%;
-    background-color: hsl(6, 100%, 80%);
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
     border-radius: 10px;
     display: flex;
     justify-content: flex-end;
 }
 .circle{
-  height: 15px;
-  width: 15px;
+  height: 15.2px;
+  width: 15.2px;
   background-color: white;
   border-radius: 50%;
  
