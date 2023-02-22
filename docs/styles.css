@@ -166,6 +166,8 @@ color: black;
     border-radius: 10px;
     display: flex;
     justify-content: flex-end;
+    animation-name:loadingbar;
+    animation-duration: 3s;
 }
 .circle{
   height: 15.2px;
@@ -206,4 +208,9 @@ color: black;
         margin-right: 85px;
         margin-top: 130px;
     }
+}
+
+@keyframes loadingbar {
+    from {width:0;}
+    to {width: 70%}
 }
