@@ -171,7 +171,7 @@ body{
 }
 
 .partialload{
-    width:70%;
+    width:0%;
     height:100%;
     background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
     border-radius: 10px;
@@ -189,7 +189,7 @@ body{
 }
 
 .minmax{
-    width:81%;
+    width:85%;
     display: flex;
     justify-content: space-between;
 }
@@ -224,7 +224,7 @@ body{
     }
 }
 
-@keyframes loadingbar {
+/* @keyframes loadingbar {
     from {width:0;}
     to {width: 70%}
-}
+} */
