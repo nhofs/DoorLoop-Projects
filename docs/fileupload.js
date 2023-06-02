@@ -12,7 +12,7 @@ function fileInputClick() {
     fileInput.click();
     console.log('fileInput was clicked')
 };
-
+let oldChunks = 0;
 function fileUpload() {
     const fileReader = new FileReader(); // initialize the object  
     for(let fileIndex = 0; fileIndex < fileInput.files.length; fileIndex++ ){
@@ -24,23 +24,27 @@ function fileUpload() {
         const content = event.target.result;
         const CHUNK_SIZE = 1024*1024;
         const totalChunks = content.byteLength / CHUNK_SIZE;
-        if (totalChunks < 10){
+        
+        if (totalChunks + oldChunks < 10){
         console.log(totalChunks)
         spaceUsed.innerHTML= Math.round(( totalChunks + Number.EPSILON) * 100) / 100 + " MB";
         spaceLeft.innerHTML= Math.round(((10 - totalChunks) + Number.EPSILON) * 100) / 100;
         let id = null;
         let width=0;
+        
         clearInterval(id);
         id = setInterval(frame, 10);
-        function frame() {if (width > totalChunks/.1)
-        {clearInterval(id);}
+        function frame() {if (width + oldChunks > totalChunks/.1)
+        {clearInterval(id);
+            }
         else {
             width++;
-            loadingWidth.style.width= width + "%";
+            loadingWidth.style.width = oldChunks + width + "%";
+           
         }
         }
-        
-        loadingWidth.style.width = 30 + "%";
+        return oldChunks = oldChunks + totalChunks;
+        // loadingWidth.style.width = 30 + "%";
         }
         else
         {alert('file exceeds maximum storage space')
